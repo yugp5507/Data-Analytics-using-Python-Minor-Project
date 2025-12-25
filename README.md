@@ -1,10 +1,10 @@
-# ?? VNSGU Student Results - Data Analytics Project
+# VNSGU Student Results - Data Analytics Project
 
 A comprehensive data analytics project analyzing student performance data from Veer Narmad South Gujarat University (VNSGU). This project includes data loading, exploratory data analysis (EDA), preprocessing, and K-Means clustering to uncover insights into student performance patterns.
 
 ---
 
-## ?? Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -20,7 +20,7 @@ A comprehensive data analytics project analyzing student performance data from V
 
 ---
 
-## ?? Overview
+## Overview
 
 This project performs comprehensive data analytics on VNSGU university student results using a structured workflow:
 
@@ -33,43 +33,43 @@ The analysis is organized into separate Jupyter notebooks for each stage, ensuri
 
 ---
 
-## ? Features
+## Features
 
-- ?? **Modular Notebook Structure** - Each analysis phase in separate notebooks
-- ?? **Comprehensive EDA** with detailed visualizations
-- ?? **Advanced Data Preprocessing** pipeline
-- ?? **K-Means Clustering** for student segmentation
-- ?? **Statistical Analysis** and correlation studies
-- ?? **Rich Visualizations** using Matplotlib and Seaborn
-- ?? **Organized Data Management** with raw and processed folders
-- ?? **Model Storage** for trained clustering models
-- ?? **Virtual Environment** for dependency isolation
+- [+] **Modular Notebook Structure** - Each analysis phase in separate notebooks
+- [+] **Comprehensive EDA** with detailed visualizations
+- [+] **Advanced Data Preprocessing** pipeline
+- [+] **K-Means Clustering** for student segmentation
+- [+] **Statistical Analysis** and correlation studies
+- [+] **Rich Visualizations** using Matplotlib and Seaborn
+- [+] **Organized Data Management** with raw and processed folders
+- [+] **Model Storage** for trained clustering models
+- [+] **Virtual Environment** for dependency isolation
 
 ---
 
-## ?? Project Structure
+## Project Structure
 
 ```
 Data-Analytics-using-Python-Minor-Project/
-¦
+ï¿½
 +-- Data/                              # Data directory
-¦   +-- raw/                           # Raw data files
-¦   ¦   +-- VNSGU_Results.xlsx        # Original student results dataset
-¦   +-- processed/                     # Cleaned and processed data
-¦       +-- cleaned_student_data.xlsx  # Preprocessed data (generated)
-¦
+ï¿½   +-- raw/                           # Raw data files
+ï¿½   ï¿½   +-- VNSGU_Results.xlsx        # Original student results dataset
+ï¿½   +-- processed/                     # Cleaned and processed data
+ï¿½       +-- cleaned_student_data.xlsx  # Preprocessed data (generated)
+ï¿½
 +-- Notebooks/                         # Jupyter notebooks for analysis
-¦   +-- 01_data_loading.ipynb         # Load and explore raw data
-¦   +-- 02_eda.ipynb                  # Exploratory Data Analysis
-¦   +-- 03_preprocessing.ipynb        # Data cleaning and preprocessing
-¦   +-- 04_kmeans_clustering.ipynb    # K-Means clustering analysis
-¦
+ï¿½   +-- 01_data_loading.ipynb         # Load and explore raw data
+ï¿½   +-- 02_eda.ipynb                  # Exploratory Data Analysis
+ï¿½   +-- 03_preprocessing.ipynb        # Data cleaning and preprocessing
+ï¿½   +-- 04_kmeans_clustering.ipynb    # K-Means clustering analysis
+ï¿½
 +-- models/                            # Trained models storage
-¦   +-- (clustering models will be saved here)
-¦
+ï¿½   +-- (clustering models will be saved here)
+ï¿½
 +-- outpurs/                           # Analysis outputs
-¦   +-- (visualizations and reports will be saved here)
-¦
+ï¿½   +-- (visualizations and reports will be saved here)
+ï¿½
 +-- main.ipynb                         # Main notebook (optional entry point)
 +-- requirements.txt                   # Python package dependencies
 +-- README.md                          # Project documentation (this file)
@@ -79,7 +79,7 @@ Data-Analytics-using-Python-Minor-Project/
 
 ---
 
-## ??? Prerequisites
+## Prerequisites
 
 ### Required Software
 
@@ -94,7 +94,7 @@ Install these extensions in VS Code (Press `Ctrl + Shift + X` to open Extensions
 1. **Python** (by Microsoft) - Essential for Python development
 2. **Jupyter** (by Microsoft) - Required to run .ipynb notebook files
 
-> ?? **Important**: Without these extensions, the notebook will not run in VS Code.
+> **Important**: Without these extensions, the notebook will not run in VS Code.
 
 ### Required Python Libraries
 
@@ -112,7 +112,7 @@ ipykernel>=6.25.0      # Jupyter kernel for VS Code
 
 ---
 
-## ?? Installation & Setup
+## Installation & Setup
 
 ### Step 1: Clone or Download the Project
 
@@ -186,7 +186,7 @@ pip install -r requirements.txt
 3. Select the interpreter from `.\venv\Scripts\python.exe` (Windows) or `./venv/bin/python` (Linux/Mac)
 4. This ensures VS Code uses the virtual environment
 
-> ?? **Tip**: Once activated, you'll see `(venv)` prefix in your terminal prompt.
+> **Tip**: Once activated, you'll see `(venv)` prefix in your terminal prompt.
 
 ### Alternative: Without Virtual Environment
 
@@ -198,7 +198,7 @@ pip install -r requirements.txt
 
 ---
 
-## ?? How to Run
+## How to Run
 
 ### Quick Start
 
@@ -261,7 +261,7 @@ The analysis follows a sequential workflow. Run the notebooks in order:
 
 ---
 
-## ?? Workflow
+## Workflow
 
 The project follows a systematic data analytics pipeline:
 
@@ -269,15 +269,15 @@ The project follows a systematic data analytics pipeline:
 Raw Data ? Loading ? EDA ? Preprocessing ? Clustering ? Insights
 ```
 
-1. **?? Data Loading**: Import raw Excel data and explore structure
-2. **?? EDA**: Analyze patterns, distributions, and correlations
-3. **?? Preprocessing**: Clean data, handle missing values, feature engineering
-4. **?? Clustering**: Apply K-Means to segment students by performance
-5. **?? Insights**: Interpret results and visualize findings
+1. **[>] Data Loading**: Import raw Excel data and explore structure
+2. **[>] EDA**: Analyze patterns, distributions, and correlations
+3. **[>] Preprocessing**: Clean data, handle missing values, feature engineering
+4. **[>] Clustering**: Apply K-Means to segment students by performance
+5. **[>] Insights**: Interpret results and visualize findings
 
 ---
 
-## ?? Technologies Used
+## Technologies Used
 
 | Technology | Purpose | Version |
 |-----------|---------|---------|
@@ -294,7 +294,7 @@ Raw Data ? Loading ? EDA ? Preprocessing ? Clustering ? Insights
 
 ---
 
-## ?? Output Files
+## Output Files
 
 ### Generated Files
 
@@ -386,7 +386,7 @@ pip install --upgrade openpyxl pandas
 
 ---
 
-## ?? Managing Virtual Environment
+## Managing Virtual Environment
 
 ### Activate Virtual Environment
 
@@ -430,7 +430,7 @@ pip freeze > requirements.txt
 
 ---
 
-## ?? Key Insights
+## Key Insights
 
 This project demonstrates:
 
@@ -442,7 +442,7 @@ This project demonstrates:
 
 ---
 
-## ?? Contributing
+## Contributing
 
 Contributions are welcome! If you'd like to improve this project:
 
@@ -459,13 +459,13 @@ Contributions are welcome! If you'd like to improve this project:
 
 ---
 
-## ?? License
+## License
 
 This project is open source and available for educational purposes.
 
 ---
 
-## ?? Contact & Support
+## Contact & Support
 
 For questions, suggestions, or issues:
 
@@ -475,7 +475,7 @@ For questions, suggestions, or issues:
 
 ---
 
-## ?? Acknowledgments
+## Acknowledgments
 
 - **VNSGU** for the dataset
 - Python community for excellent data science libraries
@@ -484,7 +484,7 @@ For questions, suggestions, or issues:
 
 ---
 
-## ?? Notes
+## Notes
 
 - This is an educational project for learning data analysis with Python
 - The dataset contains student performance data from VNSGU
@@ -495,7 +495,7 @@ For questions, suggestions, or issues:
 
 ---
 
-## ?? License
+## License
 
 This project is open source and available for educational purposes.
 

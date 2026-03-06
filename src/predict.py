@@ -4,7 +4,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans 
 from sklearn.decomposition import PCA 
 import matplotlib.pyplot as plt
-import joblib 
+import joblib
 
 # Load models
 kmeans = joblib.load("D:\\VNSGU_PDA_DATA\\Data-Analytics-using-Python-Minor-Project\\models\\kmeans_model.pkl")

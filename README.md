@@ -1,6 +1,6 @@
 # 📊 Data Analytics using Python – Minor Project
 
-This project focuses on **Exploratory Data Analysis (EDA)** using Python to analyze restaurant data and understand customer preferences and trends.
+This project focuses on **Exploratory Data Analysis (EDA)** and **Machine Learning** using Python to analyze university student results, predict academic performance, and cluster students based on their grades.
 
 ---
 
@@ -8,11 +8,11 @@ This project focuses on **Exploratory Data Analysis (EDA)** using Python to anal
 
 The main goal of this project is to:
 
-- ✅ Identify popular restaurant categories
-- ✅ Analyze customer ratings and votes
-- ✅ Compare online vs offline ordering trends
-- ✅ Understand cost preferences for dining
-- ✅ Perform univariate, bivariate, and multivariate analysis
+- ✅ Analyze student examination results and marks distribution
+- ✅ Perform univariate, bivariate, and multivariate analysis on academic data
+- ✅ Cluster students into performance groups using K-Means Clustering
+- ✅ Provide an interactive Streamlit Web App for SGPA & performance prediction
+- ✅ Generate automated PDF marksheets based on student inputs
 - ✅ Generate actionable insights through data visualization
 
 ---
@@ -107,6 +107,12 @@ pip install notebook
 jupyter notebook
 ```
 
+**Run Streamlit Web App (Prediction script):**
+```bash
+pip install streamlit reportlab joblib
+streamlit run src/predict.py
+```
+
 ### 🧠 Step 9: Check Kernel in VS Code
 
 **Method 1:**
@@ -168,24 +174,37 @@ Data-Analytics-using-Python-Minor-Project/
 
 ## 📊 Project Features
 
-- 🔍 **Data Cleaning** – Handling missing values, formatting, and data validation
-- 📈 **Univariate Analysis** – Countplot, histogram, distribution analysis
-- 🔗 **Bivariate Analysis** – Groupby operations, scatter plots, line plots
-- 🌐 **Multivariate Analysis** – Heatmap, correlation analysis
+- 🔍 **Data Cleaning** – Handling missing student records, reformatting marks, and data validation
+- 📈 **Univariate Analysis** – Pass/Fail distribution, marks histograms
+- 🔗 **Bivariate Analysis** – Internal vs External marks comparison, Subject-wise performance trends
+- 🌐 **Multivariate Analysis** – Correlation heatmap for different subjects and SGPA
 - 🎨 **Data Visualization** – Seaborn & Matplotlib for insightful graphics
-- 🤖 **Clustering Analysis** – K-means clustering for customer segmentation
+- 🤖 **Clustering Analysis** – K-means clustering for student segmentation based on scores
 - 📊 **Automated EDA Report** – Sweetviz report generation
+- 🖥️ **Interactive Web App** – Streamlit interface for predicting student SGPA & Performance
+- 📄 **Dynamic PDF Generation** – ReportLab integration to generate detailed college marksheets on the fly
 
 ---
 
 ## 📈 Key Insights
 
-- 🍽️ **Majority of restaurants** fall into the Dining category
-- ⭐ **Dining restaurants** receive the highest votes
-- 📱 **Most restaurants** do not accept online orders
-- 🌟 **Ratings** mostly range between 3.5 to 4.0
-- 💰 **Couples** prefer dining cost around ₹300
-- 📊 **Online orders** receive better ratings than offline orders
+- 🎓 **Overall Performance:** Visualizations depict the major trends in student success and failure rates.
+- ⭐ **Clustering Analytics:** Identifying high-performing vs low-performing students effectively using cluster centers.
+- 📱 **Subject Difficulty:** Highlighted subjects where students gained maximum and minimum marks.
+- 🌟 **Correlation:** Strong alignment observed between internal/practical grades and final SGPA.
+- 👨‍🎓 **Predictive Efficiency:** Scaled inputs fed into Machine Learning models calculate accurate probability-based result bands.
+
+---
+
+## 💻 Tech Stack
+
+- **Programming:** Python 3.10+
+- **Data Manipulation:** Pandas, NumPy
+- **Data Visualization:** Matplotlib, Seaborn, SweetViz
+- **Machine Learning:** Scikit-Learn, Joblib
+- **Web App Interface:** Streamlit
+- **PDF Generation:** ReportLab
+- **IDE:** Jupyter Notebook, VS Code
 
 ---
 

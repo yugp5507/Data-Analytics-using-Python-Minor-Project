@@ -15,8 +15,8 @@ st.title("🎓 Student Result & Performance Predictor")
 # ---------------- LOAD MODELS ----------------
 @st.cache_resource
 def load_models():
-    kmeans = joblib.load("../models/kmeans_model.pkl")
-    scaler = joblib.load("../models/scaler.pkl")
+    kmeans = joblib.load("models/kmeans_model.pkl")
+    scaler = joblib.load("models/scaler.pkl")
     return kmeans, scaler
 
 kmeans, scaler = load_models()
@@ -101,7 +101,7 @@ net_ext_th, net_ext_pr, net_int_th, net_int_pr, net_total = subject_full(".NET T
 
 los_ext_th, los_ext_pr, los_int_th, los_int_pr, los_total = subject_full("LINUX OPERATING SYSTEM")
 
-nt_ext_th, nt_ext_pr, nt_int_th, nt_int_pr, nt_total = subject_full("NETWORK TECHNOLOGY")
+nt_ext_th, nt_int_th, nt_total = subject_theory_only("NETWORK TECHNOLOGY")
 
 # COURSE (no practical)
 cc_ext_th, cc_int_th, cc_total = subject_theory_only("COURSE")
@@ -111,7 +111,7 @@ if st.button("🚀 Generate Result & Predict", use_container_width=True):
 
     # Calculations
     total_marks = awd_total + wfs_total + net_total + los_total + nt_total + cc_total
-    sgpa = round((total_marks / 600) * 10, 2)
+    sgpa = round((total_marks / 550) * 10, 2)
     result_status = "PASS" if total_marks >= 240 else "FAIL"
 
     # ML Input
@@ -196,9 +196,9 @@ if st.button("🚀 Generate Result & Predict", use_container_width=True):
     <tr>
     <td>NETWORK TECHNOLOGY</td>
     <td>{nt_ext_th}</td>
-    <td>{nt_ext_pr}</td>
+    <td>-</td>
     <td>{nt_int_th}</td>
-    <td>{nt_int_pr}</td>
+    <td>-</td>
     <td>{nt_total}</td>
     </tr>
 
@@ -213,7 +213,7 @@ if st.button("🚀 Generate Result & Predict", use_container_width=True):
 
     </table>
 
-    <h3>Total Marks: {total_marks} / 600</h3>
+    <h3>Total Marks: {total_marks} / 550</h3>
     <h3>SGPA: {sgpa}</h3>
     <h3>Result: {result_status}</h3>
     <h3>Performance: {performance}</h3>
@@ -232,7 +232,7 @@ if st.button("🚀 Generate Result & Predict", use_container_width=True):
             ["WEB FRAMEWORK AND SERVICES", wfs_ext_th, wfs_ext_pr, wfs_int_th, wfs_int_pr, wfs_total],
             [".NET TECHNOLOGY", net_ext_th, net_ext_pr, net_int_th, net_int_pr, net_total],
             ["LINUX OPERATING SYSTEM", los_ext_th, los_ext_pr, los_int_th, los_int_pr, los_total],
-            ["NETWORK TECHNOLOGY", nt_ext_th, nt_ext_pr, nt_int_th, nt_int_pr, nt_total],
+            ["NETWORK TECHNOLOGY", nt_ext_th, "-", nt_int_th, "-", nt_total],
             ["COURSE", cc_ext_th, "-", cc_int_th, "-", cc_total]
         ],
         "total": total_marks,

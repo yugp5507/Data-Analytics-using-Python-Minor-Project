@@ -15,8 +15,8 @@ st.title("🎓 Student Result & Performance Predictor")
 # ---------------- LOAD MODELS ----------------
 @st.cache_resource
 def load_models():
-    kmeans = joblib.load("models/kmeans_model.pkl")
-    scaler = joblib.load("models/scaler.pkl")
+    kmeans = joblib.load("..\\models\\kmeans_model.pkl")
+    scaler = joblib.load("..\\models\\scaler.pkl")
     return kmeans, scaler
 
 kmeans, scaler = load_models()
@@ -103,8 +103,8 @@ los_ext_th, los_ext_pr, los_int_th, los_int_pr, los_total = subject_full("LINUX 
 
 nt_ext_th, nt_int_th, nt_total = subject_theory_only("NETWORK TECHNOLOGY")
 
-# COURSE (no practical)
-cc_ext_th, cc_int_th, cc_total = subject_theory_only("COURSE")
+# CERTIFICATE COURSE (no practical)
+cc_ext_th, cc_int_th, cc_total = subject_theory_only("CERTIFICATE COURSE")
 
 # ---------------- BUTTON ----------------
 if st.button("🚀 Generate Result & Predict", use_container_width=True):
@@ -203,7 +203,7 @@ if st.button("🚀 Generate Result & Predict", use_container_width=True):
     </tr>
 
     <tr>
-    <td>COURSE</td>
+    <td>CERTIFICATE COURSE</td>
     <td>{cc_ext_th}</td>
     <td>-</td>
     <td>{cc_int_th}</td>
@@ -218,6 +218,7 @@ if st.button("🚀 Generate Result & Predict", use_container_width=True):
     <h3>Result: {result_status}</h3>
     <h3>Performance: {performance}</h3>
     </div>
+    <br>
     """
 
     st.markdown(html, unsafe_allow_html=True)
@@ -233,7 +234,7 @@ if st.button("🚀 Generate Result & Predict", use_container_width=True):
             [".NET TECHNOLOGY", net_ext_th, net_ext_pr, net_int_th, net_int_pr, net_total],
             ["LINUX OPERATING SYSTEM", los_ext_th, los_ext_pr, los_int_th, los_int_pr, los_total],
             ["NETWORK TECHNOLOGY", nt_ext_th, "-", nt_int_th, "-", nt_total],
-            ["COURSE", cc_ext_th, "-", cc_int_th, "-", cc_total]
+            ["CERTIFICATE COURSE", cc_ext_th, "-", cc_int_th, "-", cc_total]
         ],
         "total": total_marks,
         "sgpa": sgpa,
